@@ -1,0 +1,48 @@
+ M = readmatrix('data\INPUT.csv');
+velBodyXYZ = M(:, 14:16);
+accBodyXYZ = M(:, 17:19);
+
+alpha = M(:,12)-M(:,13);
+rpy = M(:, [11, 10, 13]);
+
+velPLTFXYZ = zeros(size(velBodyXYZ));
+accPLTFXYZ = zeros(size(accBodyXYZ));
+
+
+for ii = 1:size(accBodyXYZ, 1)
+
+[~, temp] = getBody2PLTF(velBodyXYZ(ii,:)', alpha(ii), rpy(ii, :));
+velPLTFXYZ(ii, :) = temp';
+
+ 
+[~, temp] = getBody2PLTF(accBodyXYZ(ii,:)', alpha(ii), rpy(ii, :));
+accPLTFXYZ(ii, :) = temp';
+ 
+
+end
+
+%%
+
+
+ M = readmatrix('data\TRUE.csv');
+velBodyXYZ = M(:, 9:11);
+accBodyXYZ = M(:, 15:17);
+
+alpha = M(:,7)-M(:,8);
+rpy = M(:, [6, 5, 8]);
+
+velPLTFXYZ = zeros(size(velBodyXYZ));
+accPLTFXYZ = zeros(size(accBodyXYZ));
+
+
+for ii = 1:size(accBodyXYZ, 1)
+
+[~, temp] = getBody2PLTF(velBodyXYZ(ii,:)', alpha(ii), rpy(ii, :));
+velPLTFXYZ(ii, :) = temp';
+
+ 
+[~, temp] = getBody2PLTF(accBodyXYZ(ii,:)', alpha(ii), rpy(ii, :));
+accPLTFXYZ(ii, :) = temp';
+ 
+
+end

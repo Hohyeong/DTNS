@@ -1,0 +1,76 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+#*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+!MAPd.lib
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# MATLAB temporaries
+*.slxc
+*.mexw64
+*.asv
+*.autosave
+
+# MAP data
+MAP/MAP_DB_LEVEL2/*.mat
+MAP/!Backup_MAP_LV1/
+MAP/!Backup_MAP_LV2/
+
+# MATLAB/Simulink Coder
+*_ert_rtw/
+slprj/
+
+# Log data
+logs
+TRN_Logs
+GCAWS_Logs
+
+# docs History
+#docs/~*.*
